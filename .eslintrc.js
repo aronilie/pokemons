@@ -2,15 +2,17 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true,
   },
-  extends: ["airbnb-base", "prettier"],
+  extends: ["airbnb-base", "airbnb-typescript/base", "prettier"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: "tsconfig.json",
     ecmaVersion: "latest",
     sourceType: "module",
+    project: "./tsconfig.json",
   },
   plugins: ["@typescript-eslint"],
-  rules: {},
+  rules: {
+    "no-new": "off",
+    "import/extensions": "off",
+  },
 };
