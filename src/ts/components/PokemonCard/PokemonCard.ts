@@ -1,4 +1,3 @@
-import { pokemons } from "../../utils/pokemonsData.js";
 import Component from "../Component/Component.js";
 import { Pokemon } from "../../types/interfaces.js";
 
@@ -14,10 +13,10 @@ class PokemonCard extends Component {
   }
 
   render = async () => {
-    this.addPokemon(this.pokemonUrl);
+    this.showPokemon(this.pokemonUrl);
   };
 
-  addPokemon = async (pokemonUrl: string) => {
+  showPokemon = async (pokemonUrl: string) => {
     const response = await fetch(pokemonUrl);
     const data = await response.json();
 
@@ -40,14 +39,14 @@ class PokemonCard extends Component {
       secondAbility: abilities[1].ability.name,
     };
 
-    pokemons.push(pokemon);
+    const pokemonShowed = pokemon;
 
     const scriptHTML = await `
-      <img class="pokemon__image" src=${pokemons[0].imageURL} />
+      <img class="pokemon__image" src=${pokemonShowed.imageURL} />
       <div class=pokemon__text>
-        <h2>${pokemons[0].name}</h2>
-        <span>${pokemons[0].firstAbility}</span>
-        <span>${pokemons[0].secondAbility}</span>
+        <h2>${pokemonShowed.name}</h2>
+        <span>${pokemonShowed.firstAbility}</span>
+        <span>${pokemonShowed.secondAbility}</span>
       </div>`;
     this.element.innerHTML = scriptHTML;
     this.parent.appendChild(this.element);

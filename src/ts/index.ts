@@ -1,5 +1,5 @@
-import PokemonCard from "./components/PokemonCard/PokemonCard.js";
+import PokemonsList from "./components/PokemonsList/PokemonsList.js";
 
-const url = "https://pokeapi.co/api/v2/pokemon/1/";
+const url = "https://pokeapi.co/api/v2/pokemon/?offset=00&limit=50";
 
-new PokemonCard(document.body, url);
+new PokemonsList(document.body, url);
