@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest collect-coverage",
+    "test-w": "jest src --watchAll",
     "ts-compile": "tsc -w",
     "ts-compile-production": "tsc",
     "prepare": "husky install"
