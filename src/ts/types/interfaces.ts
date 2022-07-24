@@ -20,5 +20,4 @@ export interface Pokemon {
   imageURL: string;
   firstAbility: string;
   secondAbility: string | null;
-  pokemonWeight: number;
 }
