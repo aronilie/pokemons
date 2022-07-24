@@ -2,12 +2,39 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
 body {
   margin: 0;
   border: 0;
+  color: rgb(41, 41, 41);
+}
+
+.pokemons-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .pokemon-card {
   width: min-content;
   margin: 0;
+  list-style: none;
+}
+
+.pokemon-card h2::first-letter {
+  text-transform: uppercase;
+}
+
+.pokemon__text span {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  background-color: blue;
+  padding: 1em;
+}
+
+.pokemon__text span:first-child {
+  background-color: rgb(201, 0, 60);
 }
