@@ -4,14 +4,20 @@ export interface Component {
   addListeners?: () => void;
 }
 
-export interface Pokemon {
+export interface PokemonData {
   count: number;
   next: string;
   previous: string;
   results: {
     name: string;
     url: string;
-  };
+  }[];
 }
 
-export type Pokemons = Pokemon[];
+export interface Pokemon {
+  id: number;
+  name: string;
+  imageURL: string;
+  firstAbility: string;
+  secondAbility: string | null;
+}
