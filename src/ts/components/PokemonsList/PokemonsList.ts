@@ -21,7 +21,7 @@ class PokemonsList extends Component implements IComponent {
     const data: IPokemonData = await response.json();
 
     data.results.forEach((PokemonData) => {
-      new PokemonCard(this.parent, PokemonData.url);
+      new PokemonCard(this.element, PokemonData.url);
     });
   };
 }
