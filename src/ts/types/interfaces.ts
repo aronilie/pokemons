@@ -15,9 +15,10 @@ export interface PokemonData {
 }
 
 export interface Pokemon {
-  id: number;
+  pokemonId: number;
   name: string;
   imageURL: string;
   firstAbility: string;
   secondAbility: string | null;
+  pokemonWeight: number;
 }
