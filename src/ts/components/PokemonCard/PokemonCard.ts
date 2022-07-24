@@ -42,7 +42,7 @@ class PokemonCard extends Component {
     const pokemonShowed = pokemon;
 
     const scriptHTML = await `
-      <img class="pokemon__image" src=${pokemonShowed.imageURL} />
+      <img class="pokemon__image" src=${pokemon.imageURL} />
       <div class=pokemon__text>
         <h2>${pokemonShowed.name}</h2>
         <span>${pokemonShowed.firstAbility}</span>
