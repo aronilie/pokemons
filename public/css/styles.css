@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  border: 0;
+}
+
+.pokemon-card {
+  width: min-content;
+  margin: 0;
+}
