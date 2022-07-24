@@ -1,4 +1,3 @@
-import { pokemons } from "../../utils/pokemonsData.js";
 import Component from "../Component/Component.js";
 import { Pokemon } from "../../types/interfaces.js";
 
